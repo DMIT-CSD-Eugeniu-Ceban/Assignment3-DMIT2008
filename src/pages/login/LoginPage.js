@@ -136,7 +136,7 @@ function LoginPage(props) {
                                     type="email"
                                     id="email"
                                     placeholder="User email"
-                                    /* required */
+                                    required
                                     onChange={(e) => setEmail(e.target.value)}
                                 />
                             </div>
@@ -146,7 +146,7 @@ function LoginPage(props) {
                                     type="password"
                                     id="password"
                                     placeholder="Password"
-                                    /* required */
+                                    required
                                     onChange={(e) =>
                                         setPassword(e.target.value)
                                     }
