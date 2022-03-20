@@ -60,8 +60,12 @@ function LoginPage(props) {
             } else if (error.code === "auth/wrong-password") {
                 MessageConfirmation =
                     "You inserted the wrong password. Try again.";
+            } else if (error.code === "auth/user-not-found") {
+                MessageConfirmation =
+                    "This user does not exist. Insert correct account.";
             }
             notify(MessageConfirmation);
+            console.log(error)
             });
 
 
