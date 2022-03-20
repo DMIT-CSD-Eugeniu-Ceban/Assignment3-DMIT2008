@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Sections = styled.div`
     background-color: #eceff1;
-    width: 12.1rem;
+    width: 12.1rem; /* here */
     border-top: 1px solid #78909c;
     border-right: 1px solid #78909c;
     height: 92.5vh;

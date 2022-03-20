@@ -1,56 +1,74 @@
+import React, { useState } from "react";
+import { /* Link,  */ useNavigate } from "react-router-dom";
 
-import React from 'react';
-import { /* Link,  */useNavigate } from "react-router-dom"
-
-import logo from './../../static/logo.png'
-import backgroundImage from './../../static/picture1.jpg';
-import loginImage from './../../static/login.png'
-import avatar from './../../static/avatar.png'
-import facebook from './../../static/facebook.png'
-import google from './../../static/google.png'
-import linkedin from './../../static/linkedin.png'
-
-import { Container } from './styles'
+import logo from "./../../static/logo.png";
+import backgroundImage from "./../../static/picture1.jpg";
+import loginImage from "./../../static/login.png";
+import avatar from "./../../static/avatar.png";
+import facebook from "./../../static/facebook.png";
+import google from "./../../static/google.png";
+import linkedin from "./../../static/linkedin.png";
+import { Container } from "./styles";
 
 
+import { auth } from "./../../libs/firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
-/* import { AppBar } from './components/appbar'
-import { Panels } from './components/panels'
-import { SideBar } from './components/sidebar' */
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+//Icon for the notification message
+import { FcHighPriority } from "react-icons/fc";
+
+
 
 function LoginPage(props) {
+    let navigate = useNavigate();
 
-    let navigate = useNavigate()
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const notify = (error) =>
+        toast.error(error, {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            icon: <FcHighPriority size={32} />,
+        });
+
 
     function onSignInHandler(e) {
         e.preventDefault();
-        navigate('/dashboard')
+        /* navigate("/dashboard"); */
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCrediental) => {
+            //move dashboard page
+            navigate("dashboard");
+        })
+        .catch((error) => {
+            let MessageConfirmation = "";
+
+            if (error.code === "auth/invalid-email") {
+                MessageConfirmation =
+                    "All fields are required! Please insert you email.";
+            } else if (error.code === "auth/internal-error") {
+                MessageConfirmation = "Please insert you password!";
+            } else if (error.code === "auth/wrong-password") {
+                MessageConfirmation =
+                    "You inserted the wrong password. Try again.";
+            }
+            notify(MessageConfirmation);
+            });
+
+
     }
 
     return (
         <>
-            {/* <div>
-            <ul>
-                <h1 style={{ color: 'red' }}>LOGIN PAGE</h1>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-
-                <li>
-                    <Link to="/dashboard">Dashboard</Link>
-                </li>
-            </ul>
-
-            <header>
-                <h1>Login Page</h1>
-            </header>
-
-            <form onSubmit={onSignInHandler}>
-                <input type="text" />
-                <button>sign in</button>
-            </form>
-        </div> */}
-
             <div
                 style={{
                     background: `url(${backgroundImage})`,
@@ -65,6 +83,7 @@ function LoginPage(props) {
                 }}
             >
                 <Container>
+                    <ToastContainer/>{/* notification message */}
                     <div>
                         <span>
                             <img
@@ -87,7 +106,6 @@ function LoginPage(props) {
                             alt="Sing in logo"
                         />
                     </div>
-
                     <div className="loginSection">
                         <p className="header">Login</p>
                         <div
@@ -113,7 +131,9 @@ function LoginPage(props) {
                                 <input
                                     type="email"
                                     id="email"
-                                    placeholder="User email" /* required  */
+                                    placeholder="User email"
+                                    /* required */
+                                    onChange={(e) => setEmail(e.target.value)}
                                 />
                             </div>
                             <div className="inputSection">
@@ -121,7 +141,11 @@ function LoginPage(props) {
                                 <input
                                     type="password"
                                     id="password"
-                                    placeholder="Password" /* required */
+                                    placeholder="Password"
+                                    /* required */
+                                    onChange={(e) =>
+                                        setPassword(e.target.value)
+                                    }
                                 />
                             </div>
 
@@ -174,15 +198,8 @@ function LoginPage(props) {
                     </div>
                 </Container>
             </div>
-
-            {/* <AppBar />
-            <div style={{ display: "flex" }}>
-                <SideBar />
-                <Panels />
-            </div> */}
         </>
     );
 }
 
-
-export default LoginPage
+export default LoginPage;
