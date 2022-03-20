@@ -1,5 +1,5 @@
-# :writing_hand: <span style="color: lightcoral;"> **Assignment 2**</span>  <span style="color: turquoise;">*(React Firebase Dashboard)*</span>
- :calendar: 11th, March 2022 <br/>
+# :writing_hand: <span style="color: lightcoral;"> **Assignment 3**</span>  <span style="color: turquoise;">*(React Firebase Dashboard)*</span>
+ :calendar: 25th, March 2022 <br/>
  :clock11: 11:59pm <br/>
  :package: <span style="color: red; font-weight:700">20%</span>
 
