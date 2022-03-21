@@ -2,11 +2,13 @@
 import styled from 'styled-components';
 
 const PanelColor = styled.div`
-    background-color: ${props => props.bgcolor || "#EFEBE9"};
+    background-color: ${(props) => props.bgcolor || "#EFEBE9"};
     z-index: -1;
-    width: calc(100% - 193.59px);
+    /* width: calc(100% - 193.59px); */
     padding: 2rem 2rem;
-`
+    min-height: 450px;
+    flex:1;
+`;
 const PanelNavbar = styled.div`
     display: flex;
     justify-content: space-between;

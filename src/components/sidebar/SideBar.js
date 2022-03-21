@@ -24,6 +24,7 @@ import { SidebarContainer } from "./../../ui/sideContainer";
 import { Sections, H3 } from "./styles";
 
 import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 function SideBar(props) {
     return (
@@ -99,41 +100,51 @@ function SideBar(props) {
                 </SideBarSection>
 
                 <div className="multiButton">
-                    <button
+                    <Link
                         className="button"
                         style={{
-                            paddingLeft: "unset",
                             color: "green",
+                            display: "flex",
+                            alignItems: "center",
                             fontWeight: "600",
+                            textDecoration: "none",
+                            padding: "8px 0 3px",
                         }}
+                        to={"add"}
                     >
-                        <IoAddSharp />
+                        <IoAddSharp size={20} />
                         &nbsp;Add New Product
-                    </button>
+                    </Link>
+
                     <button
                         className="button"
                         style={{
                             paddingLeft: "unset",
                             color: "darkcyan",
                             fontWeight: "600",
+                            padding: "3px 0",
                         }}
                     >
                         <IoHandLeftSharp />
                         &nbsp; Edit Product
                     </button>
-                    <button
+
+                    <Link
                         className="button"
                         style={{
-                            paddingLeft: "unset",
                             color: "orangered",
+                            display: "flex",
+                            alignItems: "center",
                             fontWeight: "600",
+                            textDecoration: "none",
+                            padding: "5px 0",
                         }}
+                        to={"/dashboard"}
                     >
-                        <IoGlassesOutline />
+                        <IoGlassesOutline size={20} />
                         &nbsp;View All Products
-                    </button>
+                    </Link>
                 </div>
-
                 <SideBarSection style={{ marginBottom: "1.5rem" }}>
                     <div style={{ display: "flex" }}>
                         <IoCart size="1.4rem" />

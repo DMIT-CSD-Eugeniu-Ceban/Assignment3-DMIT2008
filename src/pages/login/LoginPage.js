@@ -10,7 +10,6 @@ import google from "./../../static/google.png";
 import linkedin from "./../../static/linkedin.png";
 import { Container } from "./styles";
 
-
 import { auth } from "./../../libs/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
@@ -19,8 +18,6 @@ import "react-toastify/dist/ReactToastify.css";
 
 //Icon for the notification message
 import { FcHighPriority } from "react-icons/fc";
-
-
 
 function LoginPage(props) {
     let navigate = useNavigate();
@@ -40,35 +37,31 @@ function LoginPage(props) {
             icon: <FcHighPriority size={32} />,
         });
 
-
     function onSignInHandler(e) {
         e.preventDefault();
         /* navigate("/dashboard"); */
         signInWithEmailAndPassword(auth, email, password)
-        .then((userCrediental) => {
-            //move dashboard page
-            navigate("dashboard");
-        })
-        .catch((error) => {
-            let MessageConfirmation = "";
+            .then((userCrediental) => {
+                //move dashboard page
+                navigate("dashboard");
+            })
+            .catch((error) => {
+                let MessageConfirmation = "";
 
-            if (error.code === "auth/invalid-email") {
-                MessageConfirmation =
-                    "All fields are required! Please insert you email.";
-            } else if (error.code === "auth/internal-error") {
-                MessageConfirmation = "Please insert you password!";
-            } else if (error.code === "auth/wrong-password") {
-                MessageConfirmation =
-                    "You inserted the wrong password. Try again.";
-            } else if (error.code === "auth/user-not-found") {
-                MessageConfirmation =
-                    "This user does not exist. Insert correct account.";
-            }
-            notify(MessageConfirmation);
-            console.log(error)
+                if (error.code === "auth/invalid-email") {
+                    MessageConfirmation =
+                        "All fields are required! Please insert you email.";
+                } else if (error.code === "auth/internal-error") {
+                    MessageConfirmation = "Please insert you password!";
+                } else if (error.code === "auth/wrong-password") {
+                    MessageConfirmation =
+                        "You inserted the wrong password. Try again.";
+                } else if (error.code === "auth/user-not-found") {
+                    MessageConfirmation =
+                        "This user does not exist. Insert correct account.";
+                }
+                notify(MessageConfirmation);
             });
-
-
     }
 
     return (
@@ -87,7 +80,8 @@ function LoginPage(props) {
                 }}
             >
                 <Container>
-                    <ToastContainer/>{/* notification message */}
+                    <ToastContainer />
+                    {/* notification message */}
                     <div>
                         <span>
                             <img

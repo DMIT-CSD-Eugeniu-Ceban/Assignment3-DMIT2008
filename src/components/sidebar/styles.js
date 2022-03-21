@@ -6,7 +6,8 @@ const Sections = styled.div`
     width: 12.1rem; /* here */
     border-top: 1px solid #78909c;
     border-right: 1px solid #78909c;
-    height: 92.5vh;
+    /* height: 92.5vh; */
+    /* min-height: 650px; */
 
     button {
         cursor: pointer;

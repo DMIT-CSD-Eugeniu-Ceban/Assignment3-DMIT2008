@@ -14,9 +14,10 @@ const TopFramePanel = styled.div`
 
 const CenterFramePanel = styled.div`
     padding: 20px;
-    border-bottom: 1px solid #ECEFF1;
+    border-bottom: 1px solid #eceff1;
+    min-height: 500px;
     height: calc(100vh - 460px);
-`
+`;
 
 const BottomFramePanel = styled.div`
     padding: 35px 0;
