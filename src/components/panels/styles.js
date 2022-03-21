@@ -1,9 +1,7 @@
-//import { style } from '@mui/system';
 import styled from 'styled-components';
 
-const PanelColor = styled.div`
+const PanelColor = styled.section`
     background-color: ${(props) => props.bgcolor || "#EFEBE9"};
-    z-index: -1;
     /* width: calc(100% - 193.59px); */
     padding: 2rem 2rem;
     min-height: 450px;

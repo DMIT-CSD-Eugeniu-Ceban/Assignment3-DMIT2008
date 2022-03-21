@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 
 import { LoginPage, DashBoardPage, PageNotFound } from "./pages";
 
+
 function App() {
     return (
         <>
@@ -15,11 +16,16 @@ function App() {
                 <Route path="/dashboard" element={<DashBoardPage />}>
                     <Route
                         index
-                        element={<AllProductsPanel title="View All Products Panels" />}
+                        element={
+                            <AllProductsPanel title="View All Products Panels" />
+                        }
                     />
                     <Route
                         path="add"
-                        element={<AddProductPanel title="Add New Product Panel" />}
+                        element={
+                            <AddProductPanel title="Add New Product Panel" />
+                        }
+                        
                     />
                 </Route>
 
@@ -30,3 +36,5 @@ function App() {
 }
 
 export default App;
+
+

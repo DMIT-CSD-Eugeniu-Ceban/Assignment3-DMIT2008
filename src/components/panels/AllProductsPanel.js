@@ -1,10 +1,15 @@
-import React from 'react';
+import React from "react";
 
-import { IoChevronForward, IoAddOutline } from 'react-icons/io5'
+import { IoChevronForward, IoAddOutline } from "react-icons/io5";
 
-import { PanelColor, PanelNavbar, PanelRootFolder} from './styles'
-import { PanelButton } from '../../ui/mainPanelButton'
-import { PanelFrame, TopFramePanel, CenterFramePanel, BottomFramePanel} from '../../ui/mainPanel'
+import { PanelColor, PanelNavbar, PanelRootFolder } from "./styles";
+import { PanelButton } from "../../ui/mainPanelButton";
+import {
+    PanelFrame,
+    TopFramePanel,
+    CenterFramePanel,
+    BottomFramePanel,
+} from "../../ui/mainPanel";
 
 function AllProductsPanel({ title, ...props }) {
     return (
@@ -45,7 +50,12 @@ function AllProductsPanel({ title, ...props }) {
 
                 <PanelFrame>
                     <TopFramePanel>
-                        <h2 style={{ fontSize: "20px", fontWeight: "bold", color: "#757575"}}
+                        <h2
+                            style={{
+                                fontSize: "20px",
+                                fontWeight: "bold",
+                                color: "orangered",
+                            }}
                         >
                             {title || "Display Panel"}
                         </h2>
