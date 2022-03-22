@@ -24,7 +24,7 @@ import { SidebarContainer } from "./../../ui/sideContainer";
 import { Sections, H3 } from "./styles";
 
 import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
+/* import { Button } from "react-bootstrap"; */
 
 function SideBar(props) {
     return (

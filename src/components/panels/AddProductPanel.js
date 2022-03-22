@@ -12,7 +12,7 @@ import {
 } from "../../ui/mainPanel";
 
 import { AddProduct } from "components/products/widgets/AddProduct";
-import { ProductEditor } from "components/products/ProductEditor";
+/* import { ProductEditor } from "components/products/ProductEditor"; */
 
 function AddProductPanel({ title, ...props }) {
     return (

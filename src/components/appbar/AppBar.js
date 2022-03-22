@@ -5,7 +5,7 @@ import { Button } from './../../ui/buttons';
 import { IoEllipsisVertical, IoMailOutline, IoNotificationsOutline } from 'react-icons/io5'
 import { AppBarLogoStyle, AppBarLogo, AppBarButton, AppBarIcons, AppBarIcon } from './styles'
 
-import { Link } from "react-router-dom"
+/* import { Link } from "react-router-dom" */
 
 import { signOut } from "firebase/auth";
 import { auth } from "libs/firebase";

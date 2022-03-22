@@ -10,7 +10,7 @@ function ProductPanelTemporary({ children, ...props }) {
                 <div>
                     <img
                         src={template}
-                        /* width="300" */ alt="image prototype"
+                        /* width="300" */ alt="product prototype"
                     />
                 </div>
                 <div className="titleCard">
