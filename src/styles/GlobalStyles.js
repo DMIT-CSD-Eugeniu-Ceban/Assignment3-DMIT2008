@@ -13,6 +13,7 @@ const GlobalStyles = createGlobalStyle`
    line-height: 1.15;
    -webkit-text-size-adjust: 100%;
    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+   
  }
  article,
  aside,
@@ -352,7 +353,8 @@ const GlobalStyles = createGlobalStyle`
   color: #212529;
   text-align: left;
   background-color: #fff;
+
 }
 
-`
+`;
 export { GlobalStyles }

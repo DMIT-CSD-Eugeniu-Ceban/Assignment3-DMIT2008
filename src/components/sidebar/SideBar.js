@@ -180,12 +180,7 @@ function SideBar(props) {
                 <SideBarSection style={{ marginBottom: "1.5rem" }}>
                     <div style={{ display: "flex" }}>
                         <IoLogInOutline size="1.4rem" />
-                        <Link
-                            to="/"
-                            style={{ color: "black", textDecoration: "none" }}
-                        >
                             AUTHENTICATE
-                        </Link>
                     </div>
                     <div>
                         <IoChevronForward />

@@ -10,6 +10,8 @@ import {
     CenterFramePanel,
     BottomFramePanel,
 } from "../../ui/mainPanel";
+import {ProductPanelTemporary} from './../products/ProductPanelTemporary'
+
 
 function AllProductsPanel({ title, ...props }) {
     return (
@@ -61,7 +63,18 @@ function AllProductsPanel({ title, ...props }) {
                         </h2>
                     </TopFramePanel>
 
-                    <CenterFramePanel></CenterFramePanel>
+                    <CenterFramePanel>
+                        <ProductPanelTemporary />
+                        <ProductPanelTemporary />
+                        <ProductPanelTemporary />
+                        <ProductPanelTemporary />
+                        <ProductPanelTemporary />
+                        <ProductPanelTemporary />
+                        <ProductPanelTemporary />
+                        <ProductPanelTemporary />
+                        <ProductPanelTemporary />
+                        <ProductPanelTemporary />
+                    </CenterFramePanel>
 
                     <BottomFramePanel></BottomFramePanel>
                 </PanelFrame>
