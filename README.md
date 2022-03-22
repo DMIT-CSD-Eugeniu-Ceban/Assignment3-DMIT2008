@@ -1,4 +1,4 @@
-# :writing_hand: <span style="color: lightcoral;"> **Assignment 3**</span>  <span style="color: turquoise;">*(React Firebase Dashboard)*</span>
+# :writing_hand: <span style="color: lightcoral;"> **Assignment 3**</span>  <span style="color: turquoise;">*(React Firebase Login Flow)*</span>
  :calendar: 25th, March 2022 <br/>
  :clock11: 11:59pm <br/>
  :package: <span style="color: red; font-weight:700">20%</span>
@@ -11,13 +11,14 @@
 
 ##  :books: <span style="color:FFF3E0; font-weight:500" id="general-info">General Info</span>
 
-This project aims to create in &nbsp; <span style="color: lightseagreen; font-weight:600; font-size: 1.2rem"> <img src="https://media4.giphy.com/media/eNAsjO55tPbgaor7ma/giphy.gif?cid=ecf05e47g3cyt5km83vjjzpek9yemwmsw1uw6d14u4pdtj73&rid=giphy.gif&ct=s" width="19" title="react logo"> React &nbsp;</span> an online footwear dashboard store for men, women, and children. The name of this store is <span style="color:#EF5350; font-weight:600"><img src="./static/../src/static/logo.png" width="20" title="EC logo"> *"Shoes EC"*</span>. The structure of the web page consists of three essential elements, the navigation bar, the side bar, and the content of the page. These elements help to make it easier to control the processes performed by the user. Active links in this project that can be accessed are `"Dashboard"`, `"sign out"` and `"Authenticated"` which returns the user to the login page.<br/>
-The third element of this project is `"Page 404"`, which shows the user that the request was not accessible.<br/>
-This project is launched on *Netlify* and the repository can be found on the Github link.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;This project aims to create in &nbsp; <span style="color: lightseagreen; font-weight:600; font-size: 1.2rem"> <img src="https://media4.giphy.com/media/eNAsjO55tPbgaor7ma/giphy.gif?cid=ecf05e47g3cyt5km83vjjzpek9yemwmsw1uw6d14u4pdtj73&rid=giphy.gif&ct=s" width="19" title="react logo"> React &nbsp;</span> an online footwear dashboard store for men, women, and children. The name of this store is <span style="color:#EF5350; font-weight:600"><img src="./static/../src/static/logo.png" width="20" title="EC logo"> *"Shoes EC"*</span>. The structure of the web page consists of three essential elements, the navigation bar, the side bar, and the content of the page. These elements help to make it easier to control the processes performed by the user. Active links and buttons in this project that are active and can be accessed are `"Sign In"`,`"Sign Up"`,`"Add New Product"`,`"View All Products"`, and `"sign out"` which returns the user to the login page.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;This project consists of 3 active pages that allow the user to navigate only with the access of the personal email and password.
+One important element of this project is `"Page 404"`, which shows the user that the request was not accessible. Finally, the main goal of this project is to implement <span style="color:#14D8D7; font-weight:700">Links</span> and <span style="color:#14D8D7; font-weight:700">Protected Routes</span> paths between pages.<br/>
+This project is launched on &nbsp; <span style="color: lightseagreen; font-weight:600; font-size: 1.2rem"> <img src="https://cdn.iconscout.com/icon/free/png-256/netlify-3628945-3030170.png" width="19" title="react logo"> *Netlify* &nbsp;</span>, uses the &nbsp; <span style="color: #FF9C0B; font-weight:600; font-size: 1.2rem"> <img src="https://www.gameartguppy.com/wp-content/uploads/2019/04/mascot_firebase-logo.png" width="27" title="react logo">*Firebase* &nbsp;</span> client authentication system, and the repository can be found on the *Github* link.<br/>
 Good Luck !!!
 
 ##  :computer: <span style="color:78909C; font-weight:500" id="installation">Installation</span>
-1.  Install all packages/dependencies
+1.  Install all packages/dependencies:
     - Open VSCode command line. View > Terminal
     - In the command line issue the following terminal command
 ```
@@ -31,15 +32,15 @@ Good Luck !!!
 3. Server will auto-run
    - wait a few seconds, the first time the server needs more time than usual.
 ```
-  On Your Network:  http://192.168.0.16:3000   
+  On Your Network:  http://192.168.0.16:3000  or  https://assignment3-eugeniu-ceban.netlify.app/dashboard
 ```
 
 ## :gear: <span style="color:81C784; font-weight:500" id="setup">Setup</span>
 
-The use of this web page aims to meet all the expectations of our customers. It is extremely easy to control and use.
-At the launch of this project, the login page with the client's email and password will be displayed, at this moment it is not necessary to complete these two elements. The user just must press the enter button and then he will be redirected to the main page of the web page.<br/>
-In the next section, the complete web page with the three essential elements is presented. At the top is the navigation bar with the company logo and four other buttons. On the left side can be identified the menu with all the functions that can be accessed in the future. And finally, the product line will be presented at the center of the page.<br/>
-Of course, this project also provides the user with a `404 page` in case of errors or indefinite access. On this page, the user will be able to see the notification that he has accessed the wrong link. Also, on this page, the user will be able to access the "Back Home" button to get back to the main page of this product.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;The use of this web page aims to meet all the expectations of our customers. It is extremely easy to control and use.
+At the launch of this project, the login page with the client's <span style="color:#FF88F8; font-weight:700">email</span> and <span style="color:#9DFF79; font-weight:700">password</span> will be displayed. To access the main page of this online store it is necessary to use the email <span style="color:red; font-weight:700">"jim@home.com"</span> and the password <span style="color:#FF6969; font-weight:700">"123456"</span>. Without these elements access is forbidden. Then the user just must press the enter button and then he will be redirected to the main/dashboard page of the web page which will present all the customer's products.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;In the next section, the complete web page with the three essential elements is presented. At the top is the navigation bar with the company logo and four other buttons. Only the *`"sign out"`* button works. On the left side can be identified the sidebar menu with with the two active buttons *`"Add New Product Panel"`* and *`"View All Products Panels"`*. And finally, the product panels will be presented at the center of the page.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Of course, this project also provides the user with a `404 page` in case of errors or indefinite access. On this page, the user will be able to see the notification that he has accessed the wrong link. Also, on this page, the user will be able to access the `"Back to Login Page"` or `"Back to Dashboard"` button to get back to the login page or dashboard pages of this website.<br/>
 
 ## :pencil: <span style="color:CE93D8; font-weight:500" id="conclusion">Conclusion</span>
 Finally, we can mention that this project is a successful one. Website offers more opportunities to our clients. This product is easy to use, navigate and has a high-quality standard.
